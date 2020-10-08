@@ -1,0 +1,21 @@
+from pip._vendor.distlib.compat import raw_input
+import math
+import numpy as np
+
+def run(mean, var, k):
+
+
+    var=math.sqrt(var)
+
+    data = var*np.random.randn(k) + mean
+    print(data)
+
+    return data
+if __name__ == '__main__':
+    ave=raw_input("mean: ")
+    var=raw_input("variance: ")
+    k=raw_input("K: ")
+    var=float(var)
+    ave=float(ave)
+    k=int(k)
+    run(ave,var,k)
